@@ -1,0 +1,15 @@
+env:
+  APP_NAME: hello-world-demo
+  REVISION: v0.0.1
+
+steps:
+
+  - label: "build and push docker image"
+    branches: "main"
+    agents:
+      role: agent
+    concurrency: 1
+    concurrency_group: terraformer
+    key: "app"
+    command: |
+      make app__build
