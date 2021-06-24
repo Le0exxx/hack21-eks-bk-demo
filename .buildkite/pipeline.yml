@@ -12,4 +12,4 @@ steps:
     concurrency_group: terraformer
     key: "app"
     command: |
-      docker build --tag hello-world:v.0.0.1 .
+      docker build --tag hello-world:v.0.0.1 app/
